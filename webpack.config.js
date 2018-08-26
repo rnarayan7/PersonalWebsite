@@ -6,8 +6,8 @@ module.exports = {
         './src/index.js'
     ],
     output: {
-        path: path.resolve(__dirname, './build'),
-        filename: 'app.bundle.js',
+        path: __dirname,
+        filename: 'bundle.js',
     },
     module: {
         loaders: [
