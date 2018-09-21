@@ -22,6 +22,10 @@ body:before {
 header {
     font-size: 54px;
     font-weight: bolder;
+    align: center;
+}
+img {
+    hspace: 20px;
 }
 img.resize{
    min-width:20%;
