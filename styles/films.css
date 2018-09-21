@@ -32,3 +32,6 @@ img.resize{
    min-width:20%;
    min-height:20%;
 }
+figure {
+    align: center;
+}
