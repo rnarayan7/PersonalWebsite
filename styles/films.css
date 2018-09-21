@@ -37,3 +37,6 @@ img.resize{
 figure {
     text-align: center;
 }
+video {
+    width: 75%;
+}
