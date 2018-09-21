@@ -27,6 +27,8 @@ header {
 }
 img {
     hspace: 20px;
+    width: auto;
+    height: 280;
 }
 img.resize{
    min-width:20%;
