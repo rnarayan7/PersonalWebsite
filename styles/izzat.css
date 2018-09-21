@@ -23,7 +23,7 @@ body:before {
 header {
     font-size: 54px;
     font-weight: bolder;
-    align: center;
+    align-content: center;
 }
 img {
     hspace: 20px;
@@ -33,5 +33,5 @@ img.resize{
    min-height:20%;
 }
 figure {
-    align: center;
+    align-content: center;
 }
