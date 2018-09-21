@@ -28,7 +28,7 @@ header {
 img {
     hspace: 20px;
     width: auto;
-    height: 280;
+    height: 280px;
 }
 img.resize{
    min-width:20%;
@@ -36,5 +36,4 @@ img.resize{
 }
 figure {
     text-align: center;
-    width: 75%;
 }
