@@ -46,7 +46,7 @@ a:hover {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    background-color: black;
+    background-color: darkgray;
     padding-top: 10px;
     padding-bottom: 10px;
 }
