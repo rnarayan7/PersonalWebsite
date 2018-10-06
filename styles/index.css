@@ -46,6 +46,9 @@ a:hover {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    background-color: black;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .parallax-image {
     position: relative;
