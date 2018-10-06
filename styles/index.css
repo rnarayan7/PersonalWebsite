@@ -40,6 +40,8 @@ a:hover {
     flex-flow: column nowrap;
     justify-content: space-between;
     text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 .social-media {
     display: flex;
@@ -47,14 +49,27 @@ a:hover {
     justify-content: space-around;
     padding-top: 10px;
     padding-bottom: 10px;
+    background-color: #B0B0B0;
 }
 .navigation {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
-    background-color: darkgray;
+    background-color: #B0B0B0;
     padding-top: 10px;
     padding-bottom: 10px;
+}
+.navigation > a {
+    font-weight: bold;
+    background-color: #D2D2D2;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.collage {
+    width: 800px;
+    height: 100%;
 }
 .parallax-image {
     position: relative;
@@ -138,16 +153,18 @@ a:hover {
     background-image: url("../images/izzat-4.jpg");
     min-height: 100%;
 }
-#collage {
-    width: 900px;
-    height: 100%;
-}
 #index-body {
     background-color: gray;
+}
+#index-header {
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 #films {
     background-color: gray;
 }
-#index-social-media {
-    background-color: darkgray;
+#collage-wider {
+    max-width: 500px;
+    width: 500px;
+    height: auto;
 }
