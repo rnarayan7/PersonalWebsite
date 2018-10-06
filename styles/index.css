@@ -4,8 +4,11 @@ body, html {
     font-family: 'Comfortaa', cursive;
 	font-size: 18px;
 }
+img {
+    max-width: 250px;
+}
 a {
-    color: skyblue;
+    color: teal;
 }
 a:visited {
     color: none;
@@ -27,20 +30,23 @@ a:hover {
 }
 .flex-container-row {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
+    align-items: center;
     text-align: center;
 }
 .flex-container-column {
     display: flex;
     flex-flow: column nowrap;
-    justify-content: space-around;
+    justify-content: space-between;
     text-align: center;
 }
 .social-media {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 .navigation {
     display: flex;
@@ -141,4 +147,7 @@ a:hover {
 }
 #films {
     background-color: gray;
+}
+#index-social-media {
+    background-color: darkgray;
 }
