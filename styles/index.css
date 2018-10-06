@@ -4,51 +4,107 @@ body, html {
     font-family: 'Comfortaa', cursive;
 	font-size: 18px;
 }
-header {
+a:visited {
+    color: white;
+}
+a:hover {
+    color: salmon;
+}
+.large {
     font-size: 54px;
     font-weight: bolder;
 }
-.flex-container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
+.medium {
+    font-size: 24px;
+    font-weight: bolder;
+}
+.small {
+    font-size: 12px;
+    font-weight: bolder;
+}
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu menu menu menu right'
+    'main main main main main right'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-header {
+    grid-area: header;
+}
+.grid-menu {
+    grid-area: menu;
+}
+.grid-main {
+    grid-area: main;
+}
+.grid-right {
+    grid-area: right;
+}
+.grid-footer {
+    grid-area: footer;
 }
 .social-media {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
 }
-.flex-item {
-}
 .navigation {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
 }
-.index-1 .index-2 .index-3 {
+.parallax-image {
     position: relative;
-    opacity: 0.35;
+    opacity: 0.85;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.index-1 {
+#index-1 {
     background-image: url("../images/background/london-night.jpg");
     min-height: 100%;
 }
-
-.index-2 {
+#index-2 {
     background-image: url("../images/background/dream-house.jpg");
     min-height: 100%;
 }
-
-.index-3 {
+#index-3 {
     background-image: url("../images/background/amazing-mountain.jpg");
     min-height: 100%;
 }
+#isc-1 {
+    background-image: url("../images/nazaaraPhoto1.jpg");
+    min-height: 100%;
+}
+#isc-2 {
+    background-image: url("../images/nazaaraPhoto2.jpg");
+    min-height: 100%;
+}
+#isc-3 {
+    background-image: url("../images/nazaaraPhoto3.jpg");
+    min-height: 100%;
+}
+#izzat-1 {
+    background-image: url("../images/izzat-1.jpg");
+    min-height: 100%;
+}
+#izzat-2 {
+    background-image: url("../images/izzat-2.jpg");
+    min-height: 100%;
+}
+#izzat-3 {
+    background-image: url("../images/izzat-3.jpg");
+    min-height: 100%;
+}
+#izzat-4 {
+    background-image: url("../images/izzat-4.jpg");
+    min-height: 100%;
+}
 
-.index-content {
+.parallax-content {
     position: relative;
     display: flex;
     flex-flow: column wrap;
@@ -61,7 +117,12 @@ header {
     padding-left: 80px;
 }
 
-.index-content-item {
+.parallax-list-item {
+    text-align: center;
+}
+
+.parallax-content-item {
+    text-align: left;
 }
 
 .caption {
@@ -70,7 +131,8 @@ header {
     top: 50%;
     width: 100%;
     text-align: center;
-    color: #000;
+    opacity: 1.0;
+    color: white;
 }
 
 .caption span.border {
