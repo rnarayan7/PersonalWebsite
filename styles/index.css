@@ -4,8 +4,11 @@ body, html {
     font-family: 'Comfortaa', cursive;
 	font-size: 18px;
 }
+a {
+    color: skyblue;
+}
 a:visited {
-    color: white;
+    color: none;
 }
 a:hover {
     color: salmon;
@@ -22,31 +25,15 @@ a:hover {
     font-size: 12px;
     font-weight: bolder;
 }
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    'header header header header header header'
-    'menu menu menu menu menu right'
-    'main main main main main right'
-    'footer footer footer footer footer footer';
-  grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
+.flex-container-row {
+    display: flex;
+    flex-flow: row nowrap;
 }
-.grid-header {
-    grid-area: header;
-}
-.grid-menu {
-    grid-area: menu;
-}
-.grid-main {
-    grid-area: main;
-}
-.grid-right {
-    grid-area: right;
-}
-.grid-footer {
-    grid-area: footer;
+.flex-container-column {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    text-align: center;
 }
 .social-media {
     display: flex;
@@ -54,6 +41,9 @@ a:hover {
     justify-content: space-around;
 }
 .navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
 }
 .parallax-image {
     position: relative;
@@ -62,6 +52,40 @@ a:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+.parallax-content {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    color: #ddd;
+    background-color: #282E34;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+.parallax-list-item {
+    text-align: center;
+}
+.parallax-content-item {
+    text-align: left;
+}
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    opacity: 1.0;
+    color: white;
+}
+.caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
 }
 #index-1 {
     background-image: url("../images/background/london-night.jpg");
@@ -103,42 +127,13 @@ a:hover {
     background-image: url("../images/izzat-4.jpg");
     min-height: 100%;
 }
-
-.parallax-content {
-    position: relative;
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    color: #ddd;
-    background-color: #282E34;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-right: 80px;
-    padding-left: 80px;
+#collage {
+    width: 900px;
+    height: 100%;
 }
-
-.parallax-list-item {
-    text-align: center;
+#index-body {
+    background-color: skyblue;
 }
-
-.parallax-content-item {
-    text-align: left;
-}
-
-.caption {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    opacity: 1.0;
-    color: white;
-}
-
-.caption span.border {
-    background-color: #111;
-    color: #fff;
-    padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
+#films {
+    background-color: gray;
 }
