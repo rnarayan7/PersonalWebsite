@@ -43,6 +43,11 @@ a:hover {
     padding-top: 20px;
     padding-bottom: 20px;
 }
+@media only screen and (max-width: 600px) {
+    .mobile-container-column {
+        display: inline-block;
+    }
+}
 .social-media {
     display: flex;
     flex-flow: row nowrap;
