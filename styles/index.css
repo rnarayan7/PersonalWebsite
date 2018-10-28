@@ -178,6 +178,7 @@ a:hover {
         justify-content: space-between;
         position: relative;
         overflow: auto;
+        height: auto;
     }
     .collage {
         width: 100%;
