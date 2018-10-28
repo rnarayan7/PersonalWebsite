@@ -178,7 +178,8 @@ a:hover {
         flex-flow: row;
         justify-content: space-between;
         position: relative;
-        overflow: auto;
+        overflow-x: scroll;
+        overflow-y: hidden;
         height: auto;
     }
     .collage {
