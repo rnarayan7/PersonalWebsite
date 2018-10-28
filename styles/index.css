@@ -176,7 +176,7 @@ a:hover {
     .mobile-container-column {
         display: flex;
         flex-flow: row;
-        justify-content: space-between;
+        justify-content: flex-start;
         position: relative;
         overflow-x: scroll;
         overflow-y: hidden;
@@ -186,6 +186,7 @@ a:hover {
         width: 100%;
         max-width: 100%;
         height: auto;
+        bottom:0;
     }
     #collage-wider {
         overflow: hidden;
