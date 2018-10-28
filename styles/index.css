@@ -46,6 +46,7 @@ a:hover {
     flex-flow: row nowrap;
     justify-content: space-around;
     background-color: #B0B0B0;
+    height: auto;
 }
 .navigation {
     display: flex;
