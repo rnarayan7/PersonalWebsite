@@ -41,12 +41,6 @@ a:hover {
     justify-content: space-between;
     text-align: center;
 }
-@media screen and (max-width: 750px) {
-    .mobile-container-column {
-        display: inline-block;
-        width: 100%;
-    }
-}
 .social-media {
     display: flex;
     flex-flow: row nowrap;
@@ -165,13 +159,31 @@ a:hover {
 #films {
     background-color: gray;
 }
-#index-row-1 {
-    height: 50%;
+@media screen and (min-width: 1100px){
+    #index-row-1 {
+        height: 50%;
+    }
+    #index-row-2 {
+        height: 20%;
+    }
+    #collage-wider {
+        max-width: 50%;
+        height: 100%;
+    }
 }
-#index-row-2 {
-    height: 20%;
-}
-#collage-wider {
-    max-width: 50%;
-    height: 100%;
+@media screen and (max-width: 1100px){
+    .mobile-container-column {
+        display: flex;
+        flex-flow: column space-between;
+        justify-content: center;
+        position: relative;
+        overflow: auto;
+    }
+    .collage {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
 }
