@@ -2,10 +2,7 @@ body, html {
     height: 100%;
     margin: 0;
     font-family: 'Comfortaa', cursive;
-	font-size: 18px;
-}
-img {
-    max-width: 250px;
+	font-size: 1vw;
 }
 a {
     color: teal;
@@ -17,15 +14,15 @@ a:hover {
     color: salmon;
 }
 .large {
-    font-size: 54px;
+    font-size: 5vw;
     font-weight: bolder;
 }
 .medium {
-    font-size: 24px;
+    font-size: 3vw;
     font-weight: bolder;
 }
 .small {
-    font-size: 12px;
+    font-size: 1vw;
     font-weight: bolder;
 }
 .flex-container-row {
@@ -59,9 +56,20 @@ a:hover {
     font-weight: bold;
     background-color: #D2D2D2;
 }
-.collage {
-    max-width: 20%;
-    height: 100%;
+@media screen and (max-width: 600px){
+    .navigation {
+        font-size: 3vw;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 992px){
+    .navigation {
+        font-size: 2vw;
+    }
+}
+@media screen and (min-width: 992px){
+    .navigation {
+        font-size: 1.5vw;
+    }
 }
 .parallax-image {
     position: relative;
@@ -165,36 +173,50 @@ a:hover {
 #films {
     background-color: gray;
 }
-@media screen and (min-width: 1100px){
-    #index-row-1 {
-        height: 50%;
-    }
-    #index-row-2 {
-        height: 20%;
-    }
-    #collage-wider {
-        max-width: 50%;
-        height: 100%;
-    }
-}
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 768px){
     .mobile-container-column {
         display: flex;
         flex-flow: row;
         justify-content: flex-start;
-        align-content: flex-start;
         position: relative;
         overflow-x: scroll;
-        overflow-y: hidden;
         height: auto;
     }
     .collage {
-        width: 100%;
-        max-width: 100%;
+        max-height:100%;
+        object-fit: scale-down;
+    }
+    #index-row-1 {
+        height: 80vh;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    .mobile-container-column {
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-start;
+        position: relative;
+        overflow-x: scroll;
         height: auto;
-        bottom:0;
+    }
+    .collage {
+        max-width: 80%;
+        height: auto;
+    }
+    #index-row-1 {
+        height: 80vh;
+    }
+}
+@media screen and (min-width: 992px){
+    #index-row-1 {
+        height: 70vh;
     }
     #collage-wider {
-        overflow: hidden;
+        flex-grow: 2;
+    }
+    .collage {
+        max-width: 25%;
+        max-height: 50%;
+        object-fit: contain;
     }
 }
