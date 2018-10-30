@@ -56,17 +56,17 @@ a:hover {
     font-weight: bold;
     background-color: #D2D2D2;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 992px){
     .navigation {
         font-size: 3vw;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 992px){
+@media screen and (min-width: 992px) and (max-width: 1300px){
     .navigation {
         font-size: 2vw;
     }
 }
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1300px){
     .navigation {
         font-size: 1.5vw;
     }
@@ -173,24 +173,23 @@ a:hover {
 #films {
     background-color: gray;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 992px){
     .mobile-container-column {
         display: flex;
         flex-flow: row;
         justify-content: flex-start;
         position: relative;
         overflow-x: scroll;
-        height: auto;
     }
     .collage {
         max-height:100%;
-        object-fit: scale-down;
+        width: auto;
     }
     #index-row-1 {
         height: 80vh;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 992px) and (max-width: 1300px) {
     .mobile-container-column {
         display: flex;
         flex-flow: column;
@@ -207,7 +206,7 @@ a:hover {
         height: 80vh;
     }
 }
-@media screen and (min-width: 992px){
+@media screen and (min-width: 1300px){
     #index-row-1 {
         height: 70vh;
     }
