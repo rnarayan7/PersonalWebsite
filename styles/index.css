@@ -173,7 +173,7 @@ a:hover {
 #films {
     background-color: gray;
 }
-@media screen and (max-width: 768px){
+@media screen and (max-width: 600px){
     .mobile-container-column {
         display: flex;
         flex-flow: row;
@@ -190,7 +190,7 @@ a:hover {
         height: 80vh;
     }
 }
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 600px) and (max-width: 992px) {
     .mobile-container-column {
         display: flex;
         flex-flow: column;
