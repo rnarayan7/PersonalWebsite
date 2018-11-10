@@ -87,10 +87,19 @@
         border-radius:4px;
         position:relative; /* Necessary for correct mouse co-ords in Firefox */
     }
+    #app {
+        /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
     </style>
 </head>
 
-<body onload="init()">
+<body id="app" onload="init()">
     <div>
         <canvas id="drawingCanvas" height="500" width="800">
         </canvas>
