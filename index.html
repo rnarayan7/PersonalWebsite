@@ -4,7 +4,7 @@
     <script type="text/javascript">
         var canvas,ctx;
         var color = "black";
-        var mX,mY,mDown=0;
+        var mX,mY,mDown,tX,tY,tDown=0;
         var size = 12;
         function draw_circle(ctx,x,y) {
             console.log(color);
@@ -67,6 +67,27 @@
                 clear_canvas(canvas,ctx);
             }
         }
+        function touch_begin() {
+            get_touch_position();
+            draw_circle(ctx,tX,tY);
+            event.preventDefault();
+        }
+        function touch_move(e) {
+            get_touch_position(e);
+            draw_circle(ctx,tX,tY);
+            event.preventDefault();
+        }
+        function get_touch_position(e) {
+            if (!e)
+                var e = event;
+            if (e.touches) {
+                if (e.touches.length == 1) { // Only deal with one finger
+                    var touch = e.touches[0]; // Get the information for finger #1
+                    tX=touch.pageX-touch.target.offsetLeft;
+                    tY=touch.pageY-touch.target.offsetTop;
+                }
+            }
+        }
         function init() {
             canvas = document.getElementById('drawingCanvas');
             if (canvas.getContext)
@@ -75,6 +96,8 @@
                 canvas.addEventListener('mousedown', mouse_down, false);
                 canvas.addEventListener('mousemove', mouse_move, false);
                 window.addEventListener('mouseup', mouse_up, false);
+                canvas.addEventListener('touchstart', touch_begin, false);
+                canvas.addEventListener('touchmove', touch_move, false);
             }
             window.addEventListener("keydown", handle_keyboard, false);
         }
