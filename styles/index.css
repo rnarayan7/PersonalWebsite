@@ -56,17 +56,17 @@ a:hover {
     font-weight: bold;
     background-color: #D2D2D2;
 }
-@media screen and (max-width: 992px){
+@media screen and (max-width: 600px){
     .navigation {
         font-size: 3vw;
     }
 }
-@media screen and (min-width: 992px) and (max-width: 1300px){
+@media screen and (min-width: 600px) and (max-width: 992px){
     .navigation {
         font-size: 2vw;
     }
 }
-@media screen and (min-width: 1300px){
+@media screen and (min-width: 992px){
     .navigation {
         font-size: 1.5vw;
     }
@@ -173,7 +173,7 @@ a:hover {
 #films {
     background-color: gray;
 }
-@media screen and (max-width: 500px){
+@media screen and (max-width: 600px){
     .mobile-container-column {
         display: flex;
         flex-flow: row;
@@ -189,7 +189,7 @@ a:hover {
         height: 80vh;
     }
 }
-@media screen and (min-width: 500px) and (max-width: 992px) {
+@media screen and (min-width: 600px) and (max-width: 992px) {
     .mobile-container-column {
         display: flex;
         flex-flow: column;
