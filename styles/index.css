@@ -216,8 +216,9 @@ a:hover {
     .collage {
         width: 25%;
         height: 50%;
-        min-width: 25%;
-        object-fit: fill;
+        max-width: 25%;
+        max-height: 50%;
+        object-fit: contain;
     }
     .collage-item {
         width: 100%;
