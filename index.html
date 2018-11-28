@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang = "en">
     <head>
@@ -54,4 +55,137 @@
             <a href="https://twitter.com/roshannarayan7" aria-label="Twitter"><i class="fab fa-twitter-square fa-2x"></i></a>
         </div>
     </body>
+=======
+<html>
+<head>
+    <title>Drawig on a Canvas</title>
+    <script type="text/javascript">
+        var canvas,ctx;
+        var color = "black";
+        var mX,mY,mDown,tX,tY,tDown=0;
+        var size = 12;
+        function draw_circle(ctx,x,y) {
+            console.log(color);
+            ctx.fillStyle = color;
+            ctx.beginPath();
+            ctx.arc(x, y, size, 0, Math.PI*2, true);
+            ctx.closePath();
+            ctx.fill();
+            console.log("draw_circle");
+        }
+        function clear_canvas(canvas,ctx) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            console.log("clear_canvas");
+        }
+        function mouse_down() {
+            mDown=1;
+            draw_circle(ctx,mX,mY);
+            console.log("mouse_down");
+        }
+        function mouse_up() {
+            mDown=0;
+            console.log("mouse_up");
+        }
+        function mouse_move(e) {
+            get_mouse_position(e);
+            if (mDown==1) {
+                draw_circle(ctx,mX,mY);
+            }
+            console.log("mouse_move");
+        }
+        function get_mouse_position(e) {
+            if (!e)
+                var e = event;
+            if (e.offsetX) {
+                mX = e.offsetX;
+                mY = e.offsetY;
+            } else if (e.layerX) {
+                mX = e.layerX;
+                mY = e.layerY;
+            }
+        }
+        function handle_keyboard(e) {
+            console.log("handle_keyboard");
+            console.log(e);
+            if(e.keyCode == 66){
+                color = "blue";
+            } else if(e.keyCode == 71){
+                color = "green";
+            } else if(e.keyCode == 82){
+                color = "red";
+            } else if(e.keyCode == 89){
+                color = "yellow";
+            } else if(e.keyCode == 38){
+                size += 1;
+            } else if(e.keyCode == 40){
+                if(size > 1){
+                    size -= 1;
+                }
+            } else if(e.keyCode == 32){
+                clear_canvas(canvas,ctx);
+            }
+        }
+        function touch_begin() {
+            get_touch_position();
+            draw_circle(ctx,tX,tY);
+            event.preventDefault();
+        }
+        function touch_move(e) {
+            get_touch_position(e);
+            draw_circle(ctx,tX,tY);
+            event.preventDefault();
+        }
+        function get_touch_position(e) {
+            if (!e)
+                var e = event;
+            if (e.touches) {
+                if (e.touches.length == 1) { // Only deal with one finger
+                    var touch = e.touches[0]; // Get the information for finger #1
+                    tX=touch.pageX-touch.target.offsetLeft;
+                    tY=touch.pageY-touch.target.offsetTop;
+                }
+            }
+        }
+        function init() {
+            canvas = document.getElementById('drawingCanvas');
+            if (canvas.getContext)
+                ctx = canvas.getContext('2d');
+            if (ctx) {
+                canvas.addEventListener('mousedown', mouse_down, false);
+                canvas.addEventListener('mousemove', mouse_move, false);
+                window.addEventListener('mouseup', mouse_up, false);
+                canvas.addEventListener('touchstart', touch_begin, false);
+                canvas.addEventListener('touchmove', touch_move, false);
+            }
+            window.addEventListener("keydown", handle_keyboard, false);
+        }
+    </script>
+
+    <style>
+    #drawingCanvas {
+        float:left;
+        border:2px solid #888;
+        border-radius:4px;
+        position:relative; /* Necessary for correct mouse co-ords in Firefox */
+    }
+    #app {
+        /* Prevent nearby text being highlighted when accidentally dragging mouse outside confines of the canvas */
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    </style>
+</head>
+
+<body id="app" onload="init()">
+    <div>
+        <canvas id="drawingCanvas" height="500" width="800">
+        </canvas>
+    </div>
+</body>
+
+>>>>>>> 5269613cb256402dd5910adda87d06df0ef2924c
 </html>
