@@ -13,10 +13,11 @@
 </head>
 <body>
     <div>
-        <input type="checkbox" name="filter-button-a" id="filter-button-a" onclick="toggleButtonA()">A</input>
-        <input type="checkbox" name="filter-button-b" id="filter-button-b" onclick="toggleButtonB()">B</input>
-        <input type="checkbox" name="filter-button-c" id="filter-button-c" onclick="toggleButtonC()">C</input>
-        <input type="checkbox" name="filter-button-d" id="filter-button-d" onclick="toggleButtonD()">D</input>
+        <button type="button" data-toggle="all">All</button>
+        <button type="button" data-toggle=".category-a">Category A</button>
+        <button type="button" data-toggle=".category-b">Category B</button>
+        <button type="button" data-toggle=".category-c">Category C</button>
+        <button type="button" data-toggle=".category-c">Category D</button>
     </div>
     <div id="grid" class="flex-container-row mobile-container-column">
         <div class="mix category-a" data-toggle=".category-a">
@@ -24,67 +25,67 @@
                 <img class="collage-item" src="./images/collage-11.jpg" alt="Collage 11">
             </a>
         </div>
-        <div class="mix category-b category-d" data-toggle=".category-b">
+        <div class="mix category-b category-d">
             <a class="collage-container" href="./images/collage-1.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-1.jpg" alt="Collage 1">
             </a>
         </div>
-        <div class="mix category-b" data-toggle=".category-b">
+        <div class="mix category-b">
             <a class="collage-container" href="./images/collage-15.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-15.jpg" alt="Collage 15">
             </a>
         </div>
-        <div class="mix category-c category-b category-a" data-toggle=".category-c">
+        <div class="mix category-c category-b category-a">
             <a class="collage-container" href="./images/collage-2.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-2.jpg" alt="Collage 2">
             </a>
         </div>
-        <div class="mix category-d" data-toggle=".category-d">
+        <div class="mix category-d">
             <a class="collage-container" href="./images/collage-12.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-12.jpg" alt="Collage 12">
             </a>
         </div>
-        <div class="mix category-a category-b category-c" data-toggle=".category-a">
+        <div class="mix category-a category-b category-c">
             <a class="collage-container" href="./images/collage-8.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-8.jpg" alt="Collage 8">
             </a>
         <div>
-        <div class="mix category-b" data-toggle="category-b">
+        <div class="mix category-b">
             <a class="collage-container" href="./images/collage-3.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-3.jpg" alt="Collage 3">
             </a>
         </div>
-        <div class="mix category-d category-c" data-toggle="category-d">
+        <div class="mix category-d category-c">
             <a class="collage-container" href="./images/collage-16.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-16.jpg" alt="Collage 16">
             </a>
         </div>
-        <div class="mix category-c category-b" data-toggle="category-c">
+        <div class="mix category-c category-b">
             <a class="collage-container" href="./images/collage-13.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-13.jpg" alt="Collage 13">
             </a>
         </div>
-        <div class="mix category-b" data-toggle="category-b">
+        <div class="mix category-b">
             <a class="collage-container" href="./images/collage-9.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-9.jpg" alt="Collage 9">
             </a>
         </div>
-        <div class="mix category-a" data-toggle="category-a">
+        <div class="mix category-a">
             <a class="collage-container" href="./images/collage-14.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-14.jpg" alt="Collage 9">
             </a>
         </div>
-        <div class="mix category-c" data-toggle="category-c">
+        <div class="mix category-c">
             <a class="collage-container" href="./images/collage-17.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-17.jpg" alt="Collage 9">
             </a>
         </div>
-        <div class="mix category-b category-c" data-toggle="category-b">
+        <div class="mix category-b category-c">
             <a class="collage-container" href="./images/collage-18.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-18.jpg" alt="Collage 9">
             </a>
         </div>
-        <div class="mix category-c" data-toggle="category-b">
+        <div class="mix category-c">
             <a class="collage-container" href="./images/collage-19.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-19.jpg" alt="Collage 9">
             </a>
@@ -94,22 +95,22 @@
                 <img class="collage-item" src="./images/collage-20.jpg" alt="Collage 9">
             </a>
         </div>
-        <div class="mix category-d category-c category-a" data-toggle="category-b">
+        <div class="mix category-d category-c category-a">
             <a class="collage-container" href="./images/collage-21.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-21.jpg" alt="Collage 9">
             </a>
         </div>
-        <div class="mix category-d category-b" data-toggle="category-b">
+        <div class="mix category-d category-b">
             <a class="collage-container" href="./images/collage-22.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-22.jpg" alt="Collage 9">
             </a>
         </div>
-        <div class="mix category-c category-a" data-toggle="category-b">
+        <div class="mix category-c category-a">
             <a class="collage-container" href="./images/collage-23.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-23.jpg" alt="Collage 9">
             </a>
         </div>
-        <div class="mix category-b" data-toggle="category-b">
+        <div class="mix category-b">
             <a class="collage-container" href="./images/collage-24.jpg" data-lightbox="collage">
                 <img class="collage-item" src="./images/collage-24.jpg" alt="Collage 9">
             </a>
@@ -125,38 +126,6 @@
                 enable: false
             }
         });
-        function toggleButtonA(){
-            console.log("reached toggleButtonA()")
-            if($("#filter-button-a").prop("checked")){
-                mixer.toggleOn('.category-a');
-            } else {
-                mixer.toggleOff(".category-a");
-            }
-        }
-        function toggleButtonB(){
-            console.log("reached toggleButtonB()")
-            if($("#filter-button-b").prop("checked")){
-                mixer.toggleOn('.category-b');
-            } else {
-                mixer.toggleOff(".category-b");
-            }
-        }
-        function toggleButtonC(){
-            console.log("reached toggleButtonC()")
-            if($("#filter-button-c").prop("checked")){
-                mixer.toggleOn(".category-c");
-            } else {
-                mixer.toggleOff(".category-c");
-            }
-        }
-        function toggleButtonD(){
-            console.log("reached toggleButtonD()")
-            if($("#filter-button-d").prop("checked")){
-                mixer.toggleOn(".category-d");
-            } else {
-                mixer.toggleOff(".category-d");
-            }
-        }
     </script>
 </body>
 </html>
